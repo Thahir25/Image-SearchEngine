@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Search Engine</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">PiXELLS</div>
+        <div class="nav-links">
+            <button class="nav-btn favorites">
+                <i class="far fa-heart"></i>
+                Favorites
+            </button>
+            <button class="nav-btn signin">
+                <i class="far fa-user"></i>
+                Sign In
+            </button>
+        </div>
+    </nav>
+    <div class="banner"> 
+        <canvas id="dotCanvas"></canvas>
+        <h1> Image Search Engine</h1>
+        <form id="searchForm">
+            <input type="text" id="search-box" placeholder="Search any images... 🔎">
+            <button type="submit">Search</button> 
+        </form>
+
+        <div id='search-result' class="banner"></div>        <div id="loading-spinner" class="loading-spinner"></div>
+    </div>
+
+    <!-- Sign In Modal -->
+    <div class="modal" id="signInModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Welcome Back!</h2>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Email">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" placeholder="Password">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <button class="sign-in-btn">
+                    <span>Sign In</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <div class="social-login">
+                    <button class="google-btn">
+                        <i class="fab fa-google"></i>
+                    </button>
+                    <button class="github-btn">
+                        <i class="fab fa-github"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Favorites Modal -->
+    <div class="modal" id="favoritesModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>My Favorites</h2>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="favorites-grid"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
